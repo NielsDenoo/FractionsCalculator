@@ -1,0 +1,52 @@
+﻿<Window x:Class="WPFFractionCalculator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFFractionCalculator"
+        mc:Ignorable="d"
+        Title="Welcome to fraction calculator" Height="450" Width="800" HorizontalAlignment="Center">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="30"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        
+        <TextBlock Grid.Row="0" Text="Welcome to fraction calculator" Grid.ColumnSpan="7" TextAlignment="Center" FontSize="30" Background="Black" Foreground="White"/>
+        
+        <Button x:Name="Sum"  Grid.Row="1" FontSize="30" Background="DarkBlue" Foreground="White" Click="OperatorAdd">+</Button>
+        <Button x:Name="subtract" Grid.Row="1" Grid.Column="1" FontSize="30" Background="DarkBlue" Foreground="White" Click="operatorSubtract">-</Button>
+        <Button x:Name="multiply" Grid.Row="1" Grid.Column="2" FontSize="30" Background="DarkBlue" Foreground="White" Click="operatorMultiply" >X</Button>
+        <Button x:Name="divide" Grid.Row="1" Grid.Column="3" FontSize="30" Background="DarkBlue" Foreground="White" Click="operatorDivide">/</Button>
+        <Button x:Name="invert" Grid.Row="1" Grid.Column="4" FontSize="30" Background="DarkBlue" Foreground="White" Click="operatorInvert">-f</Button>
+        <Button x:Name="reciprocal" Grid.Row="1" Grid.Column="5" FontSize="30" Background="DarkBlue" Foreground="White" Click="operatorReciprocal">1/f</Button>
+        <Button x:Name="info" Grid.Row="1" Grid.Column="6" FontSize="30" Background="DarkBlue" Foreground="White" Click="showInfo">Info</Button>
+        <Button x:Name="result" Grid.Row="2" Grid.Column="4" FontSize="40" Margin="30,30,30,40" Height="45" Click="findResult" VerticalAlignment="Center" Width="45">=</Button>
+        
+        <TextBlock x:Name="operator" Grid.Row="2" Grid.Column="2" Text="+" FontSize="40" TextAlignment="Center" Height="40"></TextBlock>
+        <TextBlock x:Name="fractionLine1" Grid.Row="2" Grid.Column="1" Text="____" FontSize="40" TextAlignment="Center" Height="70"></TextBlock>
+        <TextBlock x:Name="fractionLine2" Grid.Row="2" Grid.Column="3" Text="____" FontSize="40" TextAlignment="Center" Height="70"></TextBlock>
+        <TextBlock x:Name="fractionLine3" Grid.Row="2" Grid.Column="5" Text="____" FontSize="40" TextAlignment="Center" Height="70"></TextBlock>
+        
+        <TextBox x:Name="numerator1" Grid.Row="2" Grid.Column="1" Height="50" Width="50" Margin="32,107,33,157" TextAlignment="Center" FontSize="20"></TextBox>
+        <TextBox x:Name="denominator1" Grid.Row="2" Grid.Column="1" Height="50" Width="50" Margin="32,180,33,84" TextAlignment="Center" FontSize="20"></TextBox>
+        <TextBox x:Name="numerator2" Grid.Row="2" Grid.Column="3" Height="50" Width="50" Margin="32,107,33,157" TextAlignment="Center" FontSize="20"></TextBox>
+        <TextBox x:Name="denominator2" Grid.Row="2" Grid.Column="3" Height="50" Width="50" Margin="32,180,32,84" TextAlignment="Center" FontSize="20"></TextBox>
+        <TextBox x:Name="numerator3" Grid.Row="2" Grid.Column="5" Height="50" Width="50" Margin="32,107,33,157" TextAlignment="Center" FontSize="20"></TextBox>
+        <TextBox x:Name="denominator3"  Grid.Column="5" Height="50" Width="50" Margin="32,180,33,84" Grid.Row="2" TextAlignment="Center" FontSize="20"></TextBox>
+        
+        <TextBlock Grid.Row="4" Text="Application developed by Niels Denoo - Student @ VIVES University College" Grid.ColumnSpan="7" TextAlignment="Center" FontSize="20" Background="black" Foreground="White"/>
+    </Grid>
+    
+</Window>
