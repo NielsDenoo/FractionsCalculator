@@ -37,7 +37,6 @@ namespace WPFFractionCalculator
             numerator3.Text = "";
             denominator3.Text = "";
 
-            @operator.Visibility = Visibility.Visible;
             numerator1.Visibility = Visibility.Visible;
             denominator1.Visibility = Visibility.Visible;
             fractionLine1.Visibility = Visibility.Visible;
@@ -49,7 +48,6 @@ namespace WPFFractionCalculator
             @operator.Text = "-";
             numerator3.Text = "";
             denominator3.Text = "";
-            @operator.Visibility = Visibility.Visible;
             numerator1.Visibility = Visibility.Visible;
             denominator1.Visibility = Visibility.Visible;
             fractionLine1.Visibility = Visibility.Visible;
@@ -60,7 +58,6 @@ namespace WPFFractionCalculator
             @operator.Text = "X";
             numerator3.Text = "";
             denominator3.Text = "";
-            @operator.Visibility = Visibility.Visible;
             numerator1.Visibility = Visibility.Visible;
             denominator1.Visibility = Visibility.Visible;
             fractionLine1.Visibility = Visibility.Visible;
@@ -71,7 +68,6 @@ namespace WPFFractionCalculator
             @operator.Text = "/";
             numerator3.Text = "";
             denominator3.Text = "";
-            @operator.Visibility = Visibility.Visible;
             numerator1.Visibility = Visibility.Visible;
             denominator1.Visibility = Visibility.Visible;
             fractionLine1.Visibility = Visibility.Visible;
@@ -81,7 +77,6 @@ namespace WPFFractionCalculator
         private void operatorInvert(object sender, RoutedEventArgs e)
         {
             @operator.Text = "-f";
-            @operator.Visibility = Visibility.Hidden;
             numerator1.Visibility = Visibility.Hidden;
             denominator1.Visibility = Visibility.Hidden;
             fractionLine1.Visibility = Visibility.Hidden;
@@ -92,7 +87,6 @@ namespace WPFFractionCalculator
         private void operatorReciprocal(object sender, RoutedEventArgs e)
         {
             @operator.Text = "1/f";
-            @operator.Visibility = Visibility.Hidden;
             numerator1.Visibility = Visibility.Hidden;
             denominator1.Visibility = Visibility.Hidden;
             fractionLine1.Visibility = Visibility.Hidden;
@@ -203,6 +197,14 @@ namespace WPFFractionCalculator
             InfoWindow infoWindow = new InfoWindow();
             this.Visibility = Visibility.Hidden;
             infoWindow.Show();
+        }
+
+        private void PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            if (char.IsLetter(e.Text, 0))
+            {
+                MessageBox.Show("You can't at letters");
+            }
         }
     }   
 }

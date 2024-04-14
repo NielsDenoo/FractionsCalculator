@@ -31,7 +31,7 @@
         <Button x:Name="divide" Grid.Row="1" Grid.Column="3" FontSize="30" Background="DarkBlue" Foreground="White" Click="operatorDivide">/</Button>
         <Button x:Name="invert" Grid.Row="1" Grid.Column="4" FontSize="30" Background="DarkBlue" Foreground="White" Click="operatorInvert">-f</Button>
         <Button x:Name="reciprocal" Grid.Row="1" Grid.Column="5" FontSize="30" Background="DarkBlue" Foreground="White" Click="operatorReciprocal">1/f</Button>
-        <Button x:Name="info" Grid.Row="1" Grid.Column="6" FontSize="30" Background="DarkBlue" Foreground="White" Click="showInfo">Info</Button>
+        <Button x:Name="info" Grid.Row="1" Grid.Column="6" FontSize="30" Background="DarkBlue" Foreground="White" Click="showInfo">About</Button>
         <Button x:Name="result" Grid.Row="2" Grid.Column="4" FontSize="40" Margin="30,30,30,40" Height="45" Click="findResult" VerticalAlignment="Center" Width="45">=</Button>
         
         <TextBlock x:Name="operator" Grid.Row="2" Grid.Column="2" Text="+" FontSize="40" TextAlignment="Center" Height="40"></TextBlock>
@@ -39,12 +39,12 @@
         <TextBlock x:Name="fractionLine2" Grid.Row="2" Grid.Column="3" Text="____" FontSize="40" TextAlignment="Center" Height="70"></TextBlock>
         <TextBlock x:Name="fractionLine3" Grid.Row="2" Grid.Column="5" Text="____" FontSize="40" TextAlignment="Center" Height="70"></TextBlock>
         
-        <TextBox x:Name="numerator1" Grid.Row="2" Grid.Column="1" Height="50" Width="50" Margin="32,107,33,157" TextAlignment="Center" FontSize="20"></TextBox>
-        <TextBox x:Name="denominator1" Grid.Row="2" Grid.Column="1" Height="50" Width="50" Margin="32,180,33,84" TextAlignment="Center" FontSize="20"></TextBox>
-        <TextBox x:Name="numerator2" Grid.Row="2" Grid.Column="3" Height="50" Width="50" Margin="32,107,33,157" TextAlignment="Center" FontSize="20"></TextBox>
-        <TextBox x:Name="denominator2" Grid.Row="2" Grid.Column="3" Height="50" Width="50" Margin="32,180,32,84" TextAlignment="Center" FontSize="20"></TextBox>
-        <TextBox x:Name="numerator3" Grid.Row="2" Grid.Column="5" Height="50" Width="50" Margin="32,107,33,157" TextAlignment="Center" FontSize="20"></TextBox>
-        <TextBox x:Name="denominator3"  Grid.Column="5" Height="50" Width="50" Margin="32,180,33,84" Grid.Row="2" TextAlignment="Center" FontSize="20"></TextBox>
+        <TextBox x:Name="numerator1" Grid.Row="2" Grid.Column="1" Height="50" Width="50" Margin="32,107,33,157" TextAlignment="Center" FontSize="20" PreviewTextInput="PreviewTextInput"></TextBox>
+        <TextBox x:Name="denominator1" Grid.Row="2" Grid.Column="1" Height="50" Width="50" Margin="32,180,33,84" TextAlignment="Center" FontSize="20" PreviewTextInput="PreviewTextInput"></TextBox>
+        <TextBox x:Name="numerator2" Grid.Row="2" Grid.Column="3" Height="50" Width="50" Margin="32,107,33,157" TextAlignment="Center" FontSize="20" PreviewTextInput="PreviewTextInput"></TextBox>
+        <TextBox x:Name="denominator2" Grid.Row="2" Grid.Column="3" Height="50" Width="50" Margin="32,180,32,84" TextAlignment="Center" FontSize="20" PreviewTextInput="PreviewTextInput"></TextBox>
+        <TextBox x:Name="numerator3" Grid.Row="2" Grid.Column="5" Height="50" Width="50" Margin="32,107,33,157" TextAlignment="Center" FontSize="20" PreviewTextInput="PreviewTextInput"></TextBox>
+        <TextBox x:Name="denominator3"  Grid.Column="5" Height="50" Width="50" Margin="32,180,33,84" Grid.Row="2" TextAlignment="Center" FontSize="20" PreviewTextInput="PreviewTextInput"></TextBox>
         
         <TextBlock Grid.Row="4" Text="Application developed by Niels Denoo - Student @ VIVES University College" Grid.ColumnSpan="7" TextAlignment="Center" FontSize="20" Background="black" Foreground="White"/>
     </Grid>

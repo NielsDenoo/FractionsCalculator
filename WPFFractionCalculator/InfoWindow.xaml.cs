@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -29,6 +31,25 @@ namespace WPFFractionCalculator
             MainWindow mainWindow = new MainWindow();
             this.Visibility = Visibility.Hidden;
             mainWindow.Show();
+        }
+
+        static void OpenLink(string url)
+        {
+            try
+            {
+                System.Diagnostics.Process.Start(url);
+                Console.WriteLine($"Opening URL: {url}");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"An error occurred while opening the link: {ex.Message}");
+            }
+        }
+
+        private void TextBlock_Click(object sender, RoutedEventArgs e)
+        {
+            string url = "https://github.com/NielsDenoo/FractionsCalculator";
+            OpenLink(url);
         }
     }
 }
